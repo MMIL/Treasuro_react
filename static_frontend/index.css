@@ -1,0 +1,578 @@
+@font-face {
+  font-family: neon;
+  src: url("Lato-Black.ttf");
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* html,body{ */
+  /* width: 100%; */
+  /* height: 100%; */
+  /* background-image:url('./im2.jpeg'); */
+  /* background-size: cover; */
+  /* background-position:  center; */
+  /* background-repeat: no-repeat; */
+    /* overflow-y: scroll; */
+    /* font-family: neon; */
+
+    
+/* } */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  /* display: table; */
+  background-image: url("./im3.jpg");
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat:  no-repeat;
+  font-family: neon;
+}
+
+@media screen and (min-width:320px) and (max-width:600px){
+html,
+body {
+  /* background-image: linear-gradient(to right, #6DB3F2, #6DB3F2) url('./mobile.png'); */
+  /* background: #6DB3F2 url('./mobile.png'); */
+  background-image: url("./mobile.png");
+  /* background-attachment: fixed; */
+  background-size: cover;
+  background-position: center;
+  background-repeat:  no-repeat;
+  font-family: neon;
+}
+
+}
+
+.top_img{
+  position: fixed;
+  bottom: 0px;
+  height: 50%;
+  z-index: 10;
+}
+
+.img{
+  width: 100%;
+  height: 100%;
+}
+
+.homebox{
+  width: 50%;
+  margin: 10% auto;
+  text-align: center;
+  /* float: right; */
+  height: fit-content;
+  z-index: 100;
+}
+
+.heading{
+  margin:20px auto;
+  font-size: 40px;
+  color: #fff;
+  width: 75%;
+  letter-spacing: 2px;
+}
+
+.innerbox{
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+  text-align: center;
+  margin: 20px auto;
+
+}
+
+.login,.register{
+  padding: 10px;
+  background-color:transparent;
+  border-radius: 20px;
+  border:2px solid #fff;
+  font-size:20px;
+  color: #fff;
+  margin:10px;
+  width: 50% !important;
+  text-decoration: none;
+} 
+
+.dashboard{
+  padding:10px;
+  border-radius: 20px;
+  width: 80%;
+  background-color:transparent;
+  border:2px solid #fff;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+  text-align: center;
+  margin: 0 auto;
+} 
+
+.login:hover,.register:hover,.dashboard:hover{
+  background-color: #fff;
+  color:black;
+}
+
+
+@media screen and (min-width:320px) and (max-width:767px){
+  .homebox{
+    width: 80%;
+  }
+
+}
+
+@media screen and (min-width:320px) and (max-width:390px){
+
+  .dashboard{
+    width: 85%;
+  }
+
+}
+
+@media screen and (min-width:320px) and (max-width:360px){
+
+  .innerbox{
+    width: 95%;
+  }
+
+}
+
+
+
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  background-color: rgba(191, 41, 111,1);
+  /* background-image: linear-gradient(to bottom,rgba(40,13,56,1),rgba(40,13,56,.7)); */
+  overflow-x: hidden;
+  /* transition: 0.5s; */
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+  color:#fff;
+  /* margin:5px; */
+}
+
+.sidenav span{
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  /* display: block; */
+  transition: 0.3s;
+  color:#fff;
+  user-select: none;
+  /* margin:5px; */
+
+}
+
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.sidenav .logout{
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  background-color: #000;
+  color:#fff;
+  padding: 10px;
+  width: 250px;
+
+}
+.sidenav .mmil{
+  text-align: center;
+  position:absolute;
+  bottom: 40px;
+  color:#fff;
+  width: 250px;
+
+}
+
+.sidenav p{
+  text-align: center;
+  color: #fff;
+  font-size:25px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin:10px 0;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
+/* The switch - the box around the slider */
+.switch {
+  padding: 8px 8px 8px 32px;
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 25px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+@media screen and (min-width:320px) and (max-width:600px){
+.opener{
+  position: relative;
+  top:30px;
+  /* left: -50px !important; */
+  text-align: left !important;
+}
+
+
+}
+
+
+@media screen and (min-width:601px){
+  .opener{
+    position: relative;
+    top:20px;
+    left: 20px !important;
+  }
+  }
+
+
+
+  @media screen and (min-width:601px){
+    .tellUser{
+      color: #000 !important;
+      font-size: 30px !important;
+      font-weight: 700 !important;
+    }
+    .homebox{
+      margin:5% auto;
+    }
+
+    .innerbox{
+      width: 70%;
+    }
+
+    .dashboard{
+      width: 50%;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+/* @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:200,900'); */
+
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:200,900');
+
+:root {
+  --text-color: hsla(210, 50%, 85%, 1);
+  --shadow-color: hsla(210, 40%, 52%, .4);
+  --btn-color: rgba(40,13,56);
+  --bg-color: #141218;
+}
+
+
+button {
+  position:relative;
+  padding: 10px 20px;  
+  border: none;
+  background: none;
+  cursor: pointer;
+  
+  font-family: "Source Code Pro";
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 20px;  
+  margin: 10px;
+  color: red;
+  /* color:red; */
+  
+  background-color: #fff;
+  box-shadow: var(--shadow-color) 2px 2px 22px;
+  /* box-shadow: red 2px 2px 22px; */
+  border-radius: 4px; 
+  z-index: 0;  
+  overflow: hidden;   
+}
+
+
+
+
+
+button:focus {
+  outline-color: transparent;
+  box-shadow: var(--btn-color) 2px 2px 22px;
+}
+
+.right::after, button::after {
+  content: var(--content);
+  display: block;
+  position: absolute;
+  white-space: nowrap;
+  padding: 40px 40px;
+  pointer-events:none;
+}
+
+button::after{
+  font-weight: 200;
+  top: -30px;
+  left: -20px;
+} 
+
+.right, .left {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+.right {
+  left: 66%;
+}
+.left {
+  right: 66%;
+}
+.right::after {
+  top: -30px;
+  left: calc(-66% - 20px);
+  
+  background-color: var(--bg-color);
+  color:transparent;
+  transition: transform .4s ease-out;
+  transform: translate(0, -90%) rotate(0deg)
+}
+
+button:hover .right::after {
+  transform: translate(0, -47%) rotate(0deg)
+}
+
+button .right:hover::after {
+  transform: translate(0, -50%) rotate(-7deg)
+}
+
+button .left:hover ~ .right::after {
+  transform: translate(0, -50%) rotate(7deg)
+}
+
+/* bubbles */
+/* button::before {
+  content: '';
+  pointer-events: none;
+  opacity: .6;
+  background:
+    radial-gradient(circle at 20% 35%,  transparent 0,  transparent 2px, var(--text-color) 3px, var(--text-color) 4px, transparent 4px),
+    radial-gradient(circle at 75% 44%, transparent 0,  transparent 2px, var(--text-color) 3px, var(--text-color) 4px, transparent 4px),
+    radial-gradient(circle at 46% 52%, transparent 0, transparent 4px, var(--text-color) 5px, var(--text-color) 6px, transparent 6px);
+
+  width: 100%;
+  height: 300%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  animation: bubbles 5s linear infinite both;
+} */
+/* .loginn::before {
+  content: '';
+  pointer-events: none;
+  opacity: .6;
+  background:
+    radial-gradient(circle at 20% 35%,  transparent 0,  transparent 2px, var(--text-color) 3px, var(--text-color) 4px, transparent 4px),
+    radial-gradient(circle at 75% 44%, transparent 0,  transparent 2px, var(--text-color) 3px, var(--text-color) 4px, transparent 4px),
+    radial-gradient(circle at 46% 52%, transparent 0, transparent 4px, var(--text-color) 5px, var(--text-color) 6px, transparent 6px);
+
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  animation: bubbles 5s linear infinite both;
+} */
+
+/* @keyframes bubbles {
+  from {
+    transform: translate();
+  }
+  to {
+    transform: translate(0, -66.666%);
+  }
+}   */
+
+
+
+
+/* @media screen and (min-width:320px) and (max-width:600px){
+  button::before {
+    background:
+      radial-gradient(circle at 20% 35%,  transparent 0,  transparent 2px,  #000 3px, #000 4px, transparent 4px),
+      radial-gradient(circle at 75% 44%, transparent 0,  transparent 2px,  #000 3px,  #000 4px, transparent 4px),
+      radial-gradient(circle at 46% 52%, transparent 0, transparent 4px,  #000 5px,  #000 6px, transparent 6px);
+  }
+  
+
+}
+ */
+
+
+
+.myButt {
+    outline: none;
+    border: none;
+    padding: 10px;
+    display: block;
+    margin: 10px auto;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 20px;
+    background-color: #fff;
+    position: relative;
+    border: 2px solid #fff;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+  }
+
+
+  
+  .one {
+    border-color: #fff;
+    overflow: hidden;
+    color: Red;
+  }
+
+
+  .one .insider {
+    background-color: #fff;
+    width: 100%;
+    height: 20px;
+    position: absolute;
+    left: -135px;
+    transform: rotateZ(45deg);
+    -webkit-transform: rotateZ(45deg);
+    -moz-transform: rotateZ(45deg);
+    -o-transform: rotateZ(45deg);
+    -ms-transform: rotateZ(45deg);
+  }
+  .one:hover {
+    background-color: rgb(242, 143, 177);
+    border-color: #fff;
+    color: red;
+  }
+  .one:hover .insider {
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    left: 135px;
+  }
+  
+
+
+
+
+  @media screen and (min-width:320px) and (max-width:600px){
+    button{
+      background-color: #fff !important;
+      color:red;
+    }
+  }
+
+
+
+
+  
+
+
+
+  
